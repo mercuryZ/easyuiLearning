@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EasyUI Learning</title>
+    <!-- 引入jQuery -->
+    <script rel="text/javascript" src="stylesheets/jquery-easyui-1.6.9/jquery.min.js"></script>
+    <!-- 引入EasyUI -->
+    <script rel="text/javascript" src="stylesheets/jquery-easyui-1.6.9/jquery.easyui.min.js"></script>
+    <!-- 引入EasyUI的中文国际化js，让EasyUI支持中文 -->
+    <script rel="text/javascript" src="stylesheets/jquery-easyui-1.6.9/locale/easyui-lang-zh_CN.js"></script>
+    <!-- 引入EasyUI的样式文件 -->
+    <link rel="stylesheet" href="stylesheets/jquery-easyui-1.6.9/themes/default/easyui.css" type="text/css"/>
+    <!-- 引入EasyUI的图标样式文件 -->
+    <link rel="stylesheet" href="stylesheets/jquery-easyui-1.6.9/themes/icon.css" type="text/css"/>
+  </head>
+  <body>
+    <header>
+      <h1>EasyUI Learning</h1>
+    </header>
+    <table id="dg" title="My Users" class="easyui-datagrid" style="width:550px;height:250px"
+        url="get_users.php"
+        toolbar="#toolbar"
+        rownumbers="true" fitColumns="true" singleSelect="true">
+      <thead>
+          <tr>
+              <th field="firstname" width="50">First Name</th>
+              <th field="lastname" width="50">Last Name</th>
+              <th field="phone" width="50">Phone</th>
+              <th field="email" width="50">Email</th>
+          </tr>
+      </thead>
+    </table>
+    <div id="toolbar">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New User</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Edit User</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Remove User</a>
+    </div>
+  </body>
+</html>
